@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button id="open-modal">
+          <i class="fa-solid fa-gear"></i> Configurar Tempo
+        </button>
+      </div>
+
+      <div class="display-area">
+        <div class="display-timer">
+          <h1 id="timer">00:00</h1>
+          <p class="focus-time">FOCUS TIME</p>
+        </div>
+
+        <div class="study-animation-container">
+          <img
+            src="images/programmer-boy.png"
+            alt="programmer-boy"
+            class="programmer-boy"
+          />
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start">START</button>
+        <button id="reset">RESET</button>
+        <button id="stop">STOP</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="time-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Definir Tempo</h2>
+        <label for="minutes">Minutos:</label>
+        <input type="number" id="minutes" min="1" value="25" />
+        <br /><br />
+        <label for="hours">Horas:</label>
+        <input type="number" id="hours" min="0" value="0" />
+        <br /><br />
+        <button id="set-time">Aplicar</button>
+      </div>
+    </div>
+
+    <audio id="alarm-sound" src="./sounds/win-sound.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
