@@ -294,8 +294,8 @@ body {
 }
 
 .programmer-boy {
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   animation: trailMove 5s infinite ease-in-out;
 }
